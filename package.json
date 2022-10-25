@@ -22,12 +22,12 @@
     "frontity": "^1.14.1"
   },
   "devDependencies": {
-    "@edgio/cli": "^5.0.4-next-1666689634-4170e64.0",
-    "@edgio/core": "^5.0.4-next-1666689634-4170e64.0",
-    "@edgio/devtools": "^5.0.4-next-1666689634-4170e64.0",
-    "@edgio/frontity": "^5.0.4-next-1666689634-4170e64.0",
-    "@edgio/prefetch": "^5.0.4-next-1666689634-4170e64.0",
-    "@edgio/react": "^5.0.4-next-1666689634-4170e64.0",
+    "@edgio/cli": "^5.0.4-next-1666691051-1139d4a.0",
+    "@edgio/core": "^5.0.4-next-1666691051-1139d4a.0",
+    "@edgio/devtools": "^5.0.4-next-1666691051-1139d4a.0",
+    "@edgio/frontity": "^5.0.4-next-1666691051-1139d4a.0",
+    "@edgio/prefetch": "^5.0.4-next-1666691051-1139d4a.0",
+    "@edgio/react": "^5.0.4-next-1666691051-1139d4a.0",
     "prettier": "^2.7.1"
   }
 }
