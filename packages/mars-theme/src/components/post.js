@@ -1,21 +1,21 @@
-import { useEffect } from "react";
-import { connect, styled } from "frontity";
-import Link from "./link";
-import List from "./list";
-import FeaturedMedia from "./featured-media";
+import { useEffect } from 'react'
+import { connect, styled } from 'frontity'
+import Link from './link'
+import List from './list'
+import FeaturedMedia from './featured-media'
 
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
-  const data = state.source.get(state.router.link);
+  const data = state.source.get(state.router.link)
   // Get the data of the post.
-  const post = state.source[data.type][data.id];
+  const post = state.source[data.type][data.id]
   // Get the data of the author.
-  const author = state.source.author[post.author];
+  const author = state.source.author[post.author]
   // Get a human readable date.
-  const date = new Date(post.date);
+  const date = new Date(post.date)
 
   // Get the html2react component.
-  const Html2React = libraries.html2react.Component;
+  const Html2React = libraries.html2react.Component
 
   /**
    * Once the post has loaded in the DOM, prefetch both the
@@ -23,9 +23,9 @@ const Post = ({ state, actions, libraries }) => {
    * the home page, everything is ready and it loads instantly.
    */
   useEffect(() => {
-    actions.source.fetch("/");
-    List.preload();
-  }, []);
+    actions.source.fetch('/')
+    List.preload()
+  }, [])
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
@@ -44,7 +44,7 @@ const Post = ({ state, actions, libraries }) => {
               </StyledLink>
             )}
             <DateWrapper>
-              {" "}
+              {' '}
               on <b>{date.toDateString()}</b>
             </DateWrapper>
           </div>
@@ -52,9 +52,7 @@ const Post = ({ state, actions, libraries }) => {
       </div>
 
       {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
+      {state.theme.featured.showOnPost && <FeaturedMedia id={post.featured_media} />}
 
       {/* Render the content using the Html2React component so the HTML is processed
        by the processors we included in the libraries.html2react.processors array. */}
@@ -62,39 +60,39 @@ const Post = ({ state, actions, libraries }) => {
         <Html2React html={post.content.rendered} />
       </Content>
     </Container>
-  ) : null;
-};
+  ) : null
+}
 
-export default connect(Post);
+export default connect(Post)
 
 const Container = styled.div`
   width: 800px;
   margin: 0;
   padding: 24px;
-`;
+`
 
 const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
   color: rgba(12, 17, 43);
-`;
+`
 
 const StyledLink = styled(Link)`
   padding: 15px 0;
-`;
+`
 
 const Author = styled.p`
   color: rgba(12, 17, 43, 0.9);
   font-size: 0.9em;
   display: inline;
-`;
+`
 
 const DateWrapper = styled.p`
   color: rgba(12, 17, 43, 0.9);
   font-size: 0.9em;
   display: inline;
-`;
+`
 
 /**
  * This component is the parent of the `content.rendered` HTML. We can use nested
@@ -147,12 +145,12 @@ const Content = styled.div`
 
   /* Input fields styles */
 
-  input[type="text"],
-  input[type="email"],
-  input[type="url"],
-  input[type="tel"],
-  input[type="number"],
-  input[type="date"],
+  input[type='text'],
+  input[type='email'],
+  input[type='url'],
+  input[type='tel'],
+  input[type='number'],
+  input[type='date'],
   textarea,
   select {
     display: block;
@@ -174,7 +172,7 @@ const Content = styled.div`
     }
   }
 
-  input[type="submit"] {
+  input[type='submit'] {
     display: inline-block;
     margin-bottom: 0;
     font-weight: 400;
@@ -219,4 +217,4 @@ const Content = styled.div`
       margin-right: 24px;
     }
   }
-`;
+`

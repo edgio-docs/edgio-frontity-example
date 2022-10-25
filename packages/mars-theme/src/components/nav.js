@@ -1,5 +1,5 @@
-import { connect, styled } from "frontity";
-import Link from "./link";
+import { connect, styled } from 'frontity'
+import Link from './link'
 
 /**
  * Navigation Component
@@ -10,20 +10,20 @@ const Nav = ({ state }) => (
   <NavContainer>
     {state.theme.menu.map(([name, link]) => {
       // Check if the link matched the current page url
-      const isCurrentPage = state.router.link === link;
+      const isCurrentPage = state.router.link === link
       return (
         <NavItem key={name}>
           {/* If link url is the current page, add `aria-current` for a11y */}
-          <Link link={link} aria-current={isCurrentPage ? "page" : undefined}>
+          <Link link={link} aria-current={isCurrentPage ? 'page' : undefined}>
             {name}
           </Link>
         </NavItem>
-      );
+      )
     })}
   </NavContainer>
-);
+)
 
-export default connect(Nav);
+export default connect(Nav)
 
 const NavContainer = styled.nav`
   list-style: none;
@@ -38,7 +38,7 @@ const NavContainer = styled.nav`
   @media screen and (max-width: 560px) {
     display: none;
   }
-`;
+`
 
 const NavItem = styled.div`
   padding: 0;
@@ -54,7 +54,7 @@ const NavItem = styled.div`
     border-bottom: 2px solid;
     border-bottom-color: transparent;
     /* Use for semantic approach to style the current link */
-    &[aria-current="page"] {
+    &[aria-current='page'] {
       border-bottom-color: #fff;
     }
   }
@@ -67,9 +67,9 @@ const NavItem = styled.div`
     margin-right: 0;
 
     &:after {
-      content: "";
+      content: '';
       display: inline-block;
       width: 24px;
     }
   }
-`;
+`
