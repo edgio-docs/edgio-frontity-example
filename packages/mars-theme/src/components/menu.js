@@ -1,9 +1,9 @@
-import { styled, connect, Global } from "frontity";
-import { CloseIcon, HamburgerIcon } from "./menu-icon";
-import MenuModal from "./menu-modal";
+import { styled, connect, Global } from 'frontity'
+import { CloseIcon, HamburgerIcon } from './menu-icon'
+import MenuModal from './menu-modal'
 
 function MobileMenu({ state, actions }) {
-  const { isMobileMenuOpen } = state.theme;
+  const { isMobileMenuOpen } = state.theme
   return (
     <>
       <MenuToggle onClick={actions.theme.toggleMobileMenu}>
@@ -11,7 +11,7 @@ function MobileMenu({ state, actions }) {
           <>
             {/* Add some style to the body when menu is open,
             to prevent body scroll */}
-            <Global styles={{ body: { overflowY: "hidden" } }} />
+            <Global styles={{ body: { overflowY: 'hidden' } }} />
             <CloseIcon color="white" size="20px" />
           </>
         ) : (
@@ -21,7 +21,7 @@ function MobileMenu({ state, actions }) {
       {/* If the menu is open, render the menu modal */}
       {isMobileMenuOpen && <MenuModal />}
     </>
-  );
+  )
 }
 
 const MenuToggle = styled.button`
@@ -41,6 +41,6 @@ const MenuToggle = styled.button`
     align-items: center;
     justify-content: center;
   }
-`;
+`
 
-export default connect(MobileMenu);
+export default connect(MobileMenu)
