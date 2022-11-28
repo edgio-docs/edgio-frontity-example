@@ -1,15 +1,15 @@
 {
   "scripts": {
-    "layer0": "layer0",
-    "layer0:dev": "layer0 dev",
-    "layer0:build": "layer0 build",
-    "layer0:deploy": "layer0 deploy layer0-docs",
-    "deploy": "layer0 deploy",
+    "edgio": "edgio",
+    "edgio:dev": "edgio dev",
+    "edgio:build": "edgio build",
+    "edgio:deploy": "edgio deploy edgio-docs",
+    "deploy": "edgio deploy",
     "dev": "frontity dev",
     "build": "frontity build",
     "serve": "frontity serve"
   },
-  "name": "layer0-frontity-example",
+  "name": "edgio-frontity-example",
   "version": "1.0.0",
   "private": true,
   "description": "Frontity project",
@@ -30,11 +30,11 @@
     "frontity": "^1.14.1"
   },
   "devDependencies": {
-    "@layer0/cli": "^4.13.9",
-    "@layer0/core": "^4.13.9",
-    "@layer0/devtools": "^4.13.9",
-    "@layer0/frontity": "^4.13.9",
-    "@layer0/prefetch": "^4.13.9",
-    "@layer0/react": "^4.13.9"
+    "@edgio/cli": "^5.0.4",
+    "@edgio/core": "^5.0.4",
+    "@edgio/devtools": "^5.0.4",
+    "@edgio/frontity": "^5.0.4",
+    "@edgio/prefetch": "^5.0.4",
+    "@edgio/react": "^5.0.4"
   }
 }

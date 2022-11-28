@@ -1,4 +1,4 @@
-const { createDevServer } = require("@layer0/core/dev");
+const { createDevServer } = require("@edgio/core/dev");
 
 module.exports = function () {
   return createDevServer({
@@ -8,7 +8,7 @@ module.exports = function () {
     // The command to start your app in dev mode
     command: (port) => `npx frontity dev --port=${port}`,
 
-    // Once your app's console output has matched all of the following patterns, the "Layer0 ready on ..." message will be displayed
+    // Once your app's console output has matched all of the following patterns, the "Edgio ready on ..." message will be displayed
     ready: [/SERVER STARTED/i],
   });
 };
