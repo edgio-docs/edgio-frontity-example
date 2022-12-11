@@ -1,80 +1,55 @@
-# layer0-frontity-example
+# Deploy Frontify example to Edgio
 
-This project was bootstrapped with [Frontity](https://frontity.org/).
+A demo deployment of Frontify app to Edgio.
 
-#### Table of Contents
+## Demo
 
-- [Launch a development server](#launch-a-development-server)
-- [Create your custom theme](#create-your-custom-theme)
-- [Create a production-ready build](#create-a-production-ready-build)
-- [Deploy](#deploy)
+https://layer0-docs-layer0-frontify-example-default.layer0-limelight.link
 
-### Launch a development server
+## Try It Now
 
-```
-npx frontity dev
-```
+[![Deploy with Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https://github.com/edgio-docs/edgio-frontify-example)
 
-Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
+## Getting Started
 
-The site will automatically reload if you make changes inside the `packages` folder. You will see the build errors in the console.
+### Clone This Repo
 
-> Have a look at our [Quick Start Guide](https://docs.frontity.org/getting-started/quick-start-guide)
+Use `git clone https://github.com/edgio-docs/edgio-frontify-example.git` to get the files within this repository onto your local machine.
 
-### Create your custom theme
+### Install dependencies
 
-```
-npx frontity create-package your-custom-theme
+On the command line, in the project root directory, run the following command:
+
+```bash
+npm install
 ```
 
-Use the command `npx frontity create-package` to create a new package that can be set in your `frontity.settings.js` as your theme
+### Run the Frontify app locally on Edgio
 
-> Have a look at our blog post [How to Create a React WordPress Theme in 30 Minutes](https://frontity.org/blog/how-to-create-a-react-theme-in-30-minutes/)
+Run the Frontify app with the command:
 
-### Create a production-ready build
-
-```
-npx frontity build
+```bash
+npm run edgio:dev
 ```
 
-Builds the app for production to the `build` folder.
+Load the site: http://127.0.0.1:3000
 
-This will create a `/build` folder with a `server.js` (a [serverless function](https://vercel.com/docs/v2/serverless-functions/introduction)) file and a `/static` folder with all your javascript files and other assets.
+### Testing production build locally with Edgio
 
-Your app is ready to be deployed.
+You can do a production build of your app and test it locally using:
 
-> Get more info about [Frontity's architecture](https://docs.frontity.org/architecture)
+```bash
+npm run edgio:build && npm run edgio:production
+```
 
-### Deploy
+Setting --production runs your app exactly as it will be uploaded to the Edgio cloud using serverless-offline.
 
-With the files generated in the _build_ you can deploy your project
+## Deploying to Edgio
 
-#### As a node app
+Deploying requires an account on Edgio. [Sign up here for free](https://app.layer0.co/signup). Once you have an account, you can deploy to Edgio by running the following in the root folder of your project:
 
-Use `npx frontity serve` to run it like a normal Node app.
+```bash
+npm run edgio:deploy
+```
 
-This command generates (and runs) a small web server that uses the generated `server.js` and `/static` to serve your content
-
-#### As a serverless service
-
-Upload your `static` folder to a CDN and your `server.js` file to a serverless service, like Now or Netlify.
-
-> Get more info about [how to deploy](https://docs.frontity.org/deployment) a Frontity project
-
----
-
-### » Frontity Channels 🌎
-
-We have different channels at your disposal where you can find information about the project, discuss about it and get involved:
-
-- 📖 **[Docs](https://docs.frontity.org)**: this is the place to learn how to build amazing sites with Frontity.
-- 👨‍👩‍👧‍👦 **[Community](https://community.frontity.org/)**: use our forum to [ask any questions](https://community.frontity.org/c/dev-talk-questions), feedback and meet great people. This is your place too to share [what are you building with Frontity](https://community.frontity.org/c/showcases)!
-- 🐞 **[GitHub](https://github.com/frontity/frontity)**: we use GitHub for bugs and pull requests. Questions are answered in the [community forum](https://community.frontity.org/)!
-- 🗣 **Social media**: a more informal place to interact with Frontity users, reach out to us on [Twitter](https://twitter.com/frontity).
-- 💌 **Newsletter**: do you want to receive the latest framework updates and news? Subscribe [here](https://frontity.org/)
-
-### » Get involved 🤗
-
-Got questions or feedback about Frontity? We'd love to hear from you. Use our [community forum](https://community.frontity.org) yo ! ❤️
-
-Frontity also welcomes contributions. There are many ways to support the project! If you don't know where to start, this guide might help → [How to contribute?](https://docs.frontity.org/contributing/how-to-contribute)
+See [deploying](https://docs.edg.io/guides/deploying) for more information.

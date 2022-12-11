@@ -1,5 +1,5 @@
 {
-  "name": "layer0-frontity-example",
+  "name": "edgio-frontity-example",
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
@@ -7,6 +7,7 @@
     "edgio:dev": "edgio dev",
     "edgio:build": "edgio build",
     "edgio:deploy": "edgio deploy",
+    "edgio:production": "edgio run --production",
     "format": "prettier --write '**/*' --ignore-unknown"
   },
   "engines": {
@@ -22,12 +23,12 @@
     "frontity": "^1.14.1"
   },
   "devDependencies": {
-    "@edgio/cli": "^5.0.4-next-1666691051-1139d4a.0",
-    "@edgio/core": "^5.0.4-next-1666691051-1139d4a.0",
-    "@edgio/devtools": "^5.0.4-next-1666691051-1139d4a.0",
-    "@edgio/frontity": "^5.0.4-next-1666691051-1139d4a.0",
-    "@edgio/prefetch": "^5.0.4-next-1666691051-1139d4a.0",
-    "@edgio/react": "^5.0.4-next-1666691051-1139d4a.0",
+    "@edgio/cli": "^6.0.1",
+    "@edgio/core": "^6.0.1",
+    "@edgio/devtools": "^6.0.1",
+    "@edgio/frontity": "^6.0.1",
+    "@edgio/prefetch": "^6.0.1",
+    "@edgio/react": "^6.0.1",
     "prettier": "^2.7.1"
   }
 }
