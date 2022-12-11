@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { connect, styled } from "frontity";
-import Link from "../link";
+import { useEffect } from 'react'
+import { connect, styled } from 'frontity'
+import Link from '../link'
 
 /**
  * Pagination Component
@@ -12,12 +12,12 @@ import Link from "../link";
  */
 const Pagination = ({ state, actions }) => {
   // Get the total posts to be displayed based for the current link
-  const { next, previous } = state.source.get(state.router.link);
+  const { next, previous } = state.source.get(state.router.link)
 
   // Pre-fetch the the next page if it hasn't been fetched yet.
   useEffect(() => {
-    if (next) actions.source.fetch(next);
-  }, []);
+    if (next) actions.source.fetch(next)
+  }, [])
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Pagination = ({ state, actions }) => {
         </Link>
       )}
 
-      {previous && next && " - "}
+      {previous && next && ' - '}
 
       {/* If there's a previous page, render this link */}
       {previous && (
@@ -37,16 +37,16 @@ const Pagination = ({ state, actions }) => {
         </Link>
       )}
     </div>
-  );
-};
+  )
+}
 
 /**
  * Connect Pagination to global context to give it access to
  * `state`, `actions`, `libraries` via props
  */
-export default connect(Pagination);
+export default connect(Pagination)
 
 const Text = styled.em`
   display: inline-block;
   margin-top: 16px;
-`;
+`

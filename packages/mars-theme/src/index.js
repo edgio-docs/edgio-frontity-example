@@ -1,10 +1,10 @@
-import Theme from "./components";
-import image from "@frontity/html2react/processors/image";
-import iframe from "@frontity/html2react/processors/iframe";
-import link from "@frontity/html2react/processors/link";
+import Theme from './components'
+import image from '@frontity/html2react/processors/image'
+import iframe from '@frontity/html2react/processors/iframe'
+import link from '@frontity/html2react/processors/link'
 
 const marsTheme = {
-  name: "@frontity/mars-theme",
+  name: '@frontity/mars-theme',
   roots: {
     /**
      * In Frontity, any package can add React components to the site.
@@ -18,7 +18,7 @@ const marsTheme = {
      * relevant state. It is scoped to the `theme` namespace.
      */
     theme: {
-      autoPrefetch: "in-view",
+      autoPrefetch: 'in-view',
       menu: [],
       isMobileMenuOpen: false,
       featured: {
@@ -35,10 +35,10 @@ const marsTheme = {
   actions: {
     theme: {
       toggleMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
+        state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen
       },
       closeMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = false;
+        state.theme.isMobileMenuOpen = false
       },
     },
   },
@@ -52,6 +52,6 @@ const marsTheme = {
       processors: [image, iframe, link],
     },
   },
-};
+}
 
-export default marsTheme;
+export default marsTheme
